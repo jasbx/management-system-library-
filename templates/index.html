@@ -1,0 +1,122 @@
+﻿{% extends "navbar.html" %}
+{% load static %}
+{% block body %}
+<div class="row">
+
+    <div class="col-md-8 col-sm-8 col-xs-12">
+          <div id="carousel-example" class="carousel slide slide-bdr" data-ride="carousel" >
+         
+          <div class="carousel-inner">
+              <div class="item active">
+
+                  <img src="{% static "img/R.jpeg" %}" alt="" />
+                 
+              </div>
+              <div class="item">
+                  <img src="{% static "img/OP1.jpeg" %}" alt="" />
+                
+              </div>
+              <div class="item">
+                  <img src="{% static "img/one.jpg" %}" alt="" />
+                 
+              </div>
+          </div>
+          <!--INDICATORS-->
+           <ol class="carousel-indicators">
+              <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example" data-slide-to="1"></li>
+              <li data-target="#carousel-example" data-slide-to="2"></li>
+          </ol>
+          <!--PREVIUS-NEXT BUTTONS-->
+           <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+<span class="glyphicon glyphicon-chevron-left"></span>
+</a>
+<a class="right carousel-control" href="#carousel-example" data-slide="next">
+<span class="glyphicon glyphicon-chevron-right"></span>
+</a>
+      </div>
+    </div>
+             <div class="row">
+                 <div class="col-md-4 col-sm-4 col-xs-12">
+ 
+             </div>
+
+             </div>
+             <br>
+             <br>
+             <br>
+             <div class="row">
+                 
+                 <div class="col-md-8 col-sm-8 col-xs-12">
+                     <div class="panel panel-warning">
+                        <div class="panel-heading">
+                           Recent Books
+                        </div>
+                        <div class="panel-body">
+                            <ul class="media-list">
+                        
+      <li class="media">
+        <a class="pull-left" href="#">
+        Add books
+        </a>
+   
+           
+                <div class="col-md-6">
+                     <div class="panel panel-info">
+                        <div class="panel-heading">
+                            Compose a Message
+                        </div>
+                        <div class="panel-body">
+                            <form  method="POST">
+                                {% csrf_token %}
+                                        <div class="form-group">
+                                            <label>Enter Author</label>
+                                            <input class="form-control" type="text" name='author' />
+                                        </div>
+                           
+                                <div class="form-group">
+                                            <label>Enter title</label>
+                                            <input class="form-control" type="text" name='title' />
+                                        </div>
+                                <div class="form-group">
+                                            <label>Enter price</label>
+                                            <input class="form-control" type="number" name='price' />
+                                        </div>
+                                <div class="form-group">
+                                            <label>Enter Number of pages</label>
+                                            <input class="form-control" type="number" name='pages' />
+                                        </div>
+                                <div class="form-group">
+                                            <label>Enter Categray</label>
+                                            <input class="form-control" type="text" name='Categray' />
+                                        </div>
+                                <div class="form-group">
+                                            <label>Enter Slug</label>
+                                            <input class="form-control" type="text" name='slug' />
+                                        </div>
+                                 <div class="form-group">
+                                            <label>description</label>
+                                            <input class="form-control" type="text" name='desc' style="min-height:100px;" />
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label>Attach File </label>
+                                            <input type="file" name='img'/>
+                                        </div>
+                                        
+                                        
+                                        
+                                        <button type="submit" class="btn btn-success">Send Message </button>
+                                        <button type="reset" class="btn btn-primary">Reset Fields</button>
+
+                                    </form>
+                            </div>
+                        </div>
+                </div>
+
+            </div>
+
+    </div>
+    </div>
+   
+{% endblock body %}

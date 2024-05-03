@@ -1,0 +1,101 @@
+﻿{% extends "navbar.html" %}
+{% load static %}
+{% block body %}
+    <!-- LOGO HEADER END-->
+    <section class="menu-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="navbar-collapse collapse ">
+                        <ul id="menu-top" class="nav navbar-nav navbar-right">
+                            <li><a href="{% url "home" %}" >DASHBOARD</a></li>
+                             
+                            <li><a href="form.html" class="menu-top-active">FORMS</a></li>
+                            <li>
+                                <a href="#" class="dropdown-toggle" id="ddlmenuItem" data-toggle="dropdown">UI ELEMENTS <i class="fa fa-angle-down"></i></a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="ddlmenuItem">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="ui.html">UI ELEMENTS</a></li>
+                                     <li role="presentation"><a role="menuitem" tabindex="-1" href="#">EXAMPLE LINK</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="tab.html">TABS & PANELS</a></li>
+                            <li><a href="table.html">TABLES</a></li>
+                            <li><a href="blank.html" >BLANK PAGE</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+     <!-- MENU SECTION END-->
+    <div class="content-wrapper">
+         <div class="container">
+        <div class="row pad-botm">
+            <div class="col-md-12">
+                <h4 class="header-line">FORM EXAMPLES</h4>
+                
+                            </div>
+
+        </div>
+             <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+               <div class="panel panel-info">
+                        <div class="panel-heading">
+                            LOGIN FORM
+                        </div>
+                        <div class="panel-body">
+                            <form role="form">
+                                        <div class="form-group">
+                                            <label>Enter Userame</label>
+                                            <input class="form-control" type="text" />
+                                            <p class="help-block">Help text here.</p>
+                                        </div>
+                                 <div class="form-group">
+                                            <label>Enter Email</label>
+                                            <input class="form-control" type="text" />
+                                   
+                                        </div>
+                                            <div class="form-group">
+                                        </div>
+                                  
+                                 
+                                        <button type="submit" class="btn btn-info">   LOGIN  </button>
+
+                                    </form>
+                            </div>
+                        </div>
+                            </div>
+<div class="col-md-6 col-sm-6 col-xs-12">
+               <div class="panel panel-danger">
+                        <div class="panel-heading">
+                           SINGUP FORM
+                        </div>
+                        <div class="panel-body">
+                            <form role="form">
+                                        
+                                 <div class="form-group">
+                                            <label>Enter Email</label>
+                                            <input class="form-control" type="text" />
+                                     <p class="help-block">Help text here.</p>
+                                        </div>
+                                            <div class="form-group">
+                                            <label>Enter Password</label>
+                                            <input class="form-control" type="password" />
+                                     <p class="help-block">Help text here.</p>
+                                        </div>
+                                <div class="form-group">
+                                            <label>Re Type Password </label>
+                                            <input class="form-control"  type="password" />
+                                     <p class="help-block">Help text here.</p>
+                                        </div>
+                                 
+                                        <button type="submit" class="btn btn-danger">Register Now </button>
+
+                                    </form>
+                            </div>
+                        </div>
+                            </div>
+        </div>
+        {% endblock body %}

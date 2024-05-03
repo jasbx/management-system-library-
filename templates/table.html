@@ -1,0 +1,58 @@
+﻿{% extends "navbar.html" %}
+{% load static %}
+{% block body %}
+    <div class="content-wrapper">
+        <div class="container">
+            <div class="row pad-botm">
+                <div class="col-md-12">
+                    <h4 class="header-line">TABLE EXAMPLES</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Advanced Tables -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Advanced Tables
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                    <thead>
+                                        <tr>
+                                            <th>Author</th>
+                                            <th>Title</th>
+                                            <th>Price</th>
+                                            <th>Category</th>
+                                            <th>Number of Pages</th>
+                                            <th>Edit</th>
+                                            <th>Delete</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for book in books %}
+                                            <tr class="odd gradeX">
+                                                <td>{{ book.author }}</td>
+                                                <td>{{ book.title }}</td>
+                                                <td>{{ book.price }}</td>
+                                                <td>{{ book.category }}</td>
+                                                <td>{{ book.pages }}</td>
+                                                <td><a href="{% url 'update' book.id %}"><i class="fa-solid fa-pen-to-square" style="color: #1561e5;"></i></a></td>
+                                                <td><a href="{% url 'delete' book.id %}"><i class="fa-solid fa-trash" style="color: #f13709;"></i></a></td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Advanced Tables -->
+                </div>
+            </div>
+            <!-- /. ROW -->
+        </div>
+    </div>
+    
+
+
+    {% endblock body %}

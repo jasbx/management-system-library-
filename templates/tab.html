@@ -1,0 +1,45 @@
+﻿{% extends "navbar.html" %}
+{% load static %}
+{% block body %}
+    <div class="content-wrapper">
+         <div class="container">
+        <div class="row pad-botm">
+            <div class="col-md-12">
+                <h4 class="header-line">TABS & PANELS</h4>
+                
+                            </div>
+
+        </div>
+        {% if books %}
+        Number of Books: {{ books|length }}
+    {% else %}
+        No athletes.
+    {% endif %}
+        {% for book in books %}
+        
+           <div class="row">
+                <div class="col-md-4 col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                          {{book.title}}
+                         
+                        </div>
+                        <div class="panel-body">
+                            
+                            <img src="{{book.img.url}}" style="width:200px;height:200px" alt="Book Image">
+                        </div>
+                        <div class="panel-footer">
+
+                     <div class="mybtn">
+                        <a class="btn"  href="{% url "detail" book.slug %}">Detalse</a>
+                     </div>
+                        </div>
+                    
+                    
+
+                    </div>
+                </div>
+   
+                {% endfor %}
+   
+                {% endblock body %}

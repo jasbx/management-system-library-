@@ -1,0 +1,43 @@
+{% extends "navbar.html" %}
+{% load static %}
+{% block body %}
+     <div class="content-wrapper ">
+  
+             <!-- MENU SECTION END-->
+     <div class="content-wrapper">
+        
+        <div class="container" >
+            <div class="row pad-botm " style="width:600px">
+                <div class="col-md-12">
+                    <h4 class="header-line">TABS & PANELS</h4>
+                </div>
+            </div>
+    
+            <div class="row d-flex" >
+                <div class="mybooks col-md-4 col-sm-6" style="width:600px"> <!-- Adjust the column size based on your design -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            
+                        </div>
+                        <div class="panel-body">
+                           <p> The title:{{detales.title}}</p>
+                           <p> The Author:{{detales.author}}</p>
+                           <p> The Categray:{{detales.Categray}}</p>
+                            <span>Number of pages:{{detales.pages}}</span>
+                            <br>
+                            <img style="width:300px; height:300px" src="{{detales.img.url}}" alt="Book Image" class="img-responsive"> <!-- Add img-responsive class for image responsiveness -->
+                        </div>
+                        <div class="panel-footer">
+                       <p>  description:-</p>
+                            {{detales.description}}
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+    
+    </div>
+        
+    {% endblock body %}
